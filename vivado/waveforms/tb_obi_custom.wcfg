@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_obi_custom_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_obi_custom" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="335.001 ns"></ZoomEndTime>
+      <Cursor1Time time="135.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="184"></NameColumnWidth>
+      <ValueColumnWidth column_width="74"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="54" />
+   <wvobject fp_name="divider148" type="divider">
+      <obj_property name="label">obi_master_custom</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/clk_i">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/rst_ni">
+      <obj_property name="ElementShortName">rst_ni</obj_property>
+      <obj_property name="ObjectShortName">rst_ni</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/busy_o">
+      <obj_property name="ElementShortName">busy_o</obj_property>
+      <obj_property name="ObjectShortName">busy_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/test_done_o">
+      <obj_property name="ElementShortName">test_done_o</obj_property>
+      <obj_property name="ObjectShortName">test_done_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/test_pass_o">
+      <obj_property name="ElementShortName">test_pass_o</obj_property>
+      <obj_property name="ObjectShortName">test_pass_o</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/error_count_o">
+      <obj_property name="ElementShortName">error_count_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">error_count_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/state_q">
+      <obj_property name="ElementShortName">state_q[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_q[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/obi_we_o">
+      <obj_property name="ElementShortName">obi_we_o</obj_property>
+      <obj_property name="ObjectShortName">obi_we_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/obi_req_o">
+      <obj_property name="ElementShortName">obi_req_o</obj_property>
+      <obj_property name="ObjectShortName">obi_req_o</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/obi_gnt_i">
+      <obj_property name="ElementShortName">obi_gnt_i</obj_property>
+      <obj_property name="ObjectShortName">obi_gnt_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/obi_addr_o">
+      <obj_property name="ElementShortName">obi_addr_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">obi_addr_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/obi_be_o">
+      <obj_property name="ElementShortName">obi_be_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">obi_be_o[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/obi_wdata_o">
+      <obj_property name="ElementShortName">obi_wdata_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">obi_wdata_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/obi_rvalid_i">
+      <obj_property name="ElementShortName">obi_rvalid_i</obj_property>
+      <obj_property name="ObjectShortName">obi_rvalid_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/obi_rdata_i">
+      <obj_property name="ElementShortName">obi_rdata_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">obi_rdata_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/state_d">
+      <obj_property name="ElementShortName">state_d[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_d[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/word_count_q">
+      <obj_property name="ElementShortName">word_count_q[3:0]</obj_property>
+      <obj_property name="ObjectShortName">word_count_q[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/word_count_d">
+      <obj_property name="ElementShortName">word_count_d[3:0]</obj_property>
+      <obj_property name="ObjectShortName">word_count_d[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/verify_count_q">
+      <obj_property name="ElementShortName">verify_count_q[3:0]</obj_property>
+      <obj_property name="ObjectShortName">verify_count_q[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/error_count_q">
+      <obj_property name="ElementShortName">error_count_q[7:0]</obj_property>
+      <obj_property name="ObjectShortName">error_count_q[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/wait_count_q">
+      <obj_property name="ElementShortName">wait_count_q[2:0]</obj_property>
+      <obj_property name="ObjectShortName">wait_count_q[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/wait_count_d">
+      <obj_property name="ElementShortName">wait_count_d[2:0]</obj_property>
+      <obj_property name="ObjectShortName">wait_count_d[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/current_addr">
+      <obj_property name="ElementShortName">current_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">current_addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/current_wdata">
+      <obj_property name="ElementShortName">current_wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">current_wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/expected_rdata">
+      <obj_property name="ElementShortName">expected_rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">expected_rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/all_done_q">
+      <obj_property name="ElementShortName">all_done_q</obj_property>
+      <obj_property name="ObjectShortName">all_done_q</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_master/all_done_d">
+      <obj_property name="ElementShortName">all_done_d</obj_property>
+      <obj_property name="ObjectShortName">all_done_d</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/ADDR_WIDTH">
+      <obj_property name="ElementShortName">ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/DATA_WIDTH">
+      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/NUM_TEST_WORDS">
+      <obj_property name="ElementShortName">NUM_TEST_WORDS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_TEST_WORDS[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/BASE_ADDR">
+      <obj_property name="ElementShortName">BASE_ADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BASE_ADDR[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_master/TEST_PATTERN">
+      <obj_property name="ElementShortName">TEST_PATTERN[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TEST_PATTERN[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider149" type="divider">
+      <obj_property name="label">obi_slave_custom</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_slave/clk_i">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_slave/rst_ni">
+      <obj_property name="ElementShortName">rst_ni</obj_property>
+      <obj_property name="ObjectShortName">rst_ni</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_slave/obi_req_i">
+      <obj_property name="ElementShortName">obi_req_i</obj_property>
+      <obj_property name="ObjectShortName">obi_req_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_slave/obi_gnt_o">
+      <obj_property name="ElementShortName">obi_gnt_o</obj_property>
+      <obj_property name="ObjectShortName">obi_gnt_o</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_slave/obi_addr_i">
+      <obj_property name="ElementShortName">obi_addr_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">obi_addr_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_slave/obi_we_i">
+      <obj_property name="ElementShortName">obi_we_i</obj_property>
+      <obj_property name="ObjectShortName">obi_we_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_slave/obi_be_i">
+      <obj_property name="ElementShortName">obi_be_i[3:0]</obj_property>
+      <obj_property name="ObjectShortName">obi_be_i[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_slave/obi_wdata_i">
+      <obj_property name="ElementShortName">obi_wdata_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">obi_wdata_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_slave/obi_rvalid_o">
+      <obj_property name="ElementShortName">obi_rvalid_o</obj_property>
+      <obj_property name="ObjectShortName">obi_rvalid_o</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_slave/obi_rdata_o">
+      <obj_property name="ElementShortName">obi_rdata_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">obi_rdata_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_slave/obi_err_o">
+      <obj_property name="ElementShortName">obi_err_o</obj_property>
+      <obj_property name="ObjectShortName">obi_err_o</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_slave/memory">
+      <obj_property name="ElementShortName">memory[0:1023][7:0]</obj_property>
+      <obj_property name="ObjectShortName">memory[0:1023][7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_slave/rdata_q">
+      <obj_property name="ElementShortName">rdata_q[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_q[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_slave/rvalid_q">
+      <obj_property name="ElementShortName">rvalid_q</obj_property>
+      <obj_property name="ObjectShortName">rvalid_q</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_slave/err_q">
+      <obj_property name="ElementShortName">err_q</obj_property>
+      <obj_property name="ObjectShortName">err_q</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_obi_custom/i_slave/addr_valid">
+      <obj_property name="ElementShortName">addr_valid</obj_property>
+      <obj_property name="ObjectShortName">addr_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_slave/read_data">
+      <obj_property name="ElementShortName">read_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_slave/ADDR_WIDTH">
+      <obj_property name="ElementShortName">ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_slave/DATA_WIDTH">
+      <obj_property name="ElementShortName">DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_obi_custom/i_slave/MEM_SIZE">
+      <obj_property name="ElementShortName">MEM_SIZE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_SIZE[31:0]</obj_property>
+   </wvobject>
+</wave_config>

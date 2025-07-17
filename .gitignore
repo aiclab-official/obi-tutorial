@@ -1,0 +1,49 @@
+# Xilinx Vivado/Xsim generated files
+vivado_project/
+xsim.dir/
+*.jou
+*.log
+*.wdb
+*.pb
+*.reloc
+*.rtti
+*.mem
+*.dbg
+*.xdbg
+*.svtype
+*.type
+*.backup.jou
+*.backup.log
+build/
+
+# Simulation files
+*.tcl
+*.backup.*
+xsimcrash.log
+xsimkernel.log
+xsimSettings.ini
+TempBreakPointFile.txt
+Compile_Options.txt
+xsim_script.tcl
+*.sdb
+*.rlx
+
+# Tags and temporary files
+tags
+*.swp
+*.tmp
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE/Editor files
+.vscode/
+*.suo
+*.user
+
+# Vivado project folders
+obi_tutorial.cache/
+obi_tutorial.hw/
+obi_tutorial.ip_user_files/
+obi_tutorial.sim/
