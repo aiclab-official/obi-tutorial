@@ -62,7 +62,7 @@ For interactive debugging and waveform analysis, create a Vivado project:
 #### Create Project
 
 ```bash
-cd /home/amir/Projects/AICLAB/Site/obi-tutorial
+cd obi-tutorial
 vivado -mode tcl -source scripts/create_project.tcl
 ```
 
