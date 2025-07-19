@@ -1,0 +1,125 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.4 Chrome/138.0.7204.97 Electron/37.2.1 Safari/537.36" version="28.0.4">
+  <diagram name="OBI Master FSM" id="obi-master-fsm">
+    <mxGraphModel dx="814" dy="1670" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IDLE" value="IDLE" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#000000;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="123" y="180" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WRITE_REQ" value="WRITE_REQ" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#000000;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="WRITE_WAIT" value="WRITE_WAIT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#000000;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="540" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="READ_REQ" value="READ_REQ" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e1d5e7;strokeColor=#000000;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="690" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="READ_WAIT" value="READ_WAIT" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#000000;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="540" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DONE" value="DONE" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;strokeColor=#000000;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="START" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="73" y="195" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;" parent="1" source="START" target="IDLE" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="!reset &amp;amp;&amp;amp; !all_done_q" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="IDLE" target="WRITE_REQ" edge="1">
+          <mxGeometry x="0.0768" y="10" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="173" y="90" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t3" value="&lt;div&gt;wait_count_q &amp;gt;= 1&lt;/div&gt;obi_gnt_i &amp;amp;&amp;amp; not last write" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.712;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry x="-0.2991" y="350" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+            <mxPoint x="347.28" y="60" as="sourcePoint" />
+            <mxPoint x="372.72" y="60" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="347.28" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t4" value="obi_gnt_i &amp;&amp; last write" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;" parent="1" source="WRITE_REQ" target="WRITE_WAIT" edge="1">
+          <mxGeometry y="20" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;" parent="1" source="WRITE_WAIT" target="READ_REQ" edge="1">
+          <mxGeometry x="-0.0369" y="30" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t7" value="obi_gnt_i &amp;&amp; not last read" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;" parent="1" source="READ_REQ" target="READ_REQ" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840" y="130" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t8" value="obi_gnt_i &amp;&amp; last read" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;" parent="1" source="READ_REQ" target="READ_WAIT" edge="1">
+          <mxGeometry x="0.1112" y="10" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="330" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t9" value="not all responses verified" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.66;exitY=0.963;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="READ_WAIT" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="370" as="offset" />
+            <mxPoint x="619.68" y="360" as="sourcePoint" />
+            <mxPoint x="600" y="360.12" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="619" y="380" />
+              <mxPoint x="600" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t10" value="all responses verified" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;" parent="1" edge="1">
+          <mxGeometry y="-10" relative="1" as="geometry">
+            <mxPoint x="541" y="330" as="sourcePoint" />
+            <mxPoint x="421" y="330" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2LgViUNL14A2h0_ih1H_-1" value="&lt;div&gt;wait_count_q &amp;gt;= 1&lt;/div&gt;obi_gnt_i &amp;amp;&amp;amp; not last write" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.712;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry x="-0.2991" y="350" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+            <mxPoint x="587.28" y="60" as="sourcePoint" />
+            <mxPoint x="612.72" y="60" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="587.28" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2LgViUNL14A2h0_ih1H_-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;exitX=-0.036;exitY=0.505;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="DONE" target="IDLE">
+          <mxGeometry x="0.1705" y="33" relative="1" as="geometry">
+            <mxPoint x="227" y="370" as="sourcePoint" />
+            <mxPoint x="100" y="280" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2LgViUNL14A2h0_ih1H_-3" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 11px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;!rst_ni&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="197.5" width="40" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="2LgViUNL14A2h0_ih1H_-4" value="&lt;div&gt;wait_count_q &amp;gt;= 1&lt;/div&gt;obi_gnt_i &amp;amp;&amp;amp; not last write" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.963;entryY=0.703;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="IDLE">
+          <mxGeometry x="-0.2991" y="350" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+            <mxPoint x="220" y="200" as="sourcePoint" />
+            <mxPoint x="245.44000000000005" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="200" />
+              <mxPoint x="240" y="222" />
+              <mxPoint x="219" y="222" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

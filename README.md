@@ -409,9 +409,7 @@ This strategy ensures that the custom modules are not only self-consistent but a
 |              | `be`     | Byte enables for partial writes        |
 |              | `wdata`  | Write data                             |
 | **Response** | `rvalid` | Slave asserts when response is valid   |
-|              | `rready` | Master asserts when ready for response |
 |              | `rdata`  | Read data                              |
-|              | `err`    | Slave signals a transaction error      |
 
 
 ## References
