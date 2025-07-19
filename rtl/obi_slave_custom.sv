@@ -75,7 +75,7 @@ module obi_slave_custom
         end
     end
 
-    // Response generation - simple and immediate
+    // Response generation
     always_ff @(posedge clk_i or negedge rst_ni) begin
         if (!rst_ni) begin
             rvalid_q <= '0;
@@ -103,7 +103,7 @@ module obi_slave_custom
         end
     end
 
-    // Write handling - immediate and simple
+    // Write handling
     always_ff @(posedge clk_i) begin
         if (obi_req_i && obi_we_i && addr_valid) begin
             // Perform write with byte enables
