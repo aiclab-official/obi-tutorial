@@ -1,8 +1,8 @@
-# OBI Bus Tutorial - Creating a Minimal OBI Master and Slave
+# OBI Bus Tutorial - Creating a Minimal OBI Master
 
 > Validated against the PULP OBI test infrastructure
 
-This project provides a hands-on guide for creating and validating a minimal, OBI-compliant master and slave using simple SystemVerilog ports. All modules are tested against the official PULP OBI standard infrastructure.
+This project provides a hands-on guide for creating and validating a minimal, OBI-compliant master using simple SystemVerilog ports. All modules are tested against the official PULP OBI standard infrastructure.
 
 ## Quickstart
 
