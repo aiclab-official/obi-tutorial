@@ -23,8 +23,7 @@ XELAB_FLAGS = -debug all
 XSIM_FLAGS = -t xsim.tcl
 
 # Source files
-RTL_SOURCES = $(RTL_DIR)/obi_master_custom.sv \
-              $(RTL_DIR)/obi_slave_custom.sv
+RTL_SOURCES = $(RTL_DIR)/obi_master_custom.sv
 
 # Common cells dependencies (required for OBI)
 COMMON_CELLS_SOURCES = $(EXT_DIR)/common_cells/src/cf_math_pkg.sv \
@@ -52,14 +51,8 @@ OBI_SOURCES = $(EXT_DIR)/obi/src/obi_pkg.sv \
 EXT_SOURCES = $(COMMON_CELLS_SOURCES) $(OBI_SOURCES)
 
 # Default target
-all: test_custom test_master test_slave
+all: test_master
 
-# Test custom master + slave
-test_custom:
-	@echo "Running custom master + slave test..."
-	$(XVLOG) $(XVLOG_FLAGS) $(RTL_SOURCES) $(SIM_DIR)/tb_obi_custom.sv
-	$(XELAB) tb_obi_custom -s tb_obi_custom_sim $(XELAB_FLAGS)
-	$(XSIM) tb_obi_custom_sim $(XSIM_FLAGS)
 
 # Test custom master vs PULP memory
 test_master: 
@@ -67,13 +60,6 @@ test_master:
 	$(XVLOG) $(XVLOG_FLAGS) $(RTL_SOURCES) $(EXT_SOURCES) $(SIM_DIR)/tb_obi_master.sv
 	$(XELAB) tb_obi_master -s tb_obi_master_sim $(XELAB_FLAGS)
 	$(XSIM) tb_obi_master_sim $(XSIM_FLAGS)
-
-# Test custom slave vs PULP master
-test_slave:
-	@echo "Running custom slave vs PULP master test..."
-	$(XVLOG) $(XVLOG_FLAGS) $(RTL_SOURCES) $(EXT_SOURCES) $(SIM_DIR)/tb_obi_slave.sv
-	$(XELAB) tb_obi_slave -s tb_obi_slave_sim $(XELAB_FLAGS)
-	$(XSIM) tb_obi_slave_sim $(XSIM_FLAGS)
 
 # Generic simulation target
 # Usage: make sim TB=tb_obi_custom
@@ -106,9 +92,7 @@ help:
 	@echo ""
 	@echo "Available targets:"
 	@echo "  all               - Run all tests"
-	@echo "  test_custom       - Test custom master + slave (standalone)"
 	@echo "  test_master       - Test custom master vs PULP memory (requires ext deps)"
-	@echo "  test_slave        - Test custom slave vs PULP master (requires ext deps)"
 	@echo "  sim               - Generic simulation (use TB=testbench_name)"
 	@echo "  check             - Syntax check only"
 	@echo "  clean             - Clean generated files"
@@ -118,14 +102,11 @@ help:
 	@echo "  TB                - Testbench name for sim target (default: $(TB))"
 	@echo ""
 	@echo "Examples:"
-	@echo "  make test_custom                   # Basic functionality test"
 	@echo "  make sim TB=tb_obi_master          # Run specific testbench"
 	@echo "  make clean; make test_master       # Clean and test"
 	@echo ""
 	@echo "Notes:"
 	@echo "  - All simulations use Vivado Xsim"
 	@echo "  - Waveforms are saved as .wdb files"
-	@echo "  - test_master and test_slave require external PULP dependencies"
-	@echo "  - test_custom runs standalone without external dependencies"
 
-.PHONY: all test_custom test_master test_slave sim check clean help
+.PHONY: all test_master  sim check clean help
